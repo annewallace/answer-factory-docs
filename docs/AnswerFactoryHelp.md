@@ -9,6 +9,7 @@
 [Answers](#answers) <br>
 <br><br>
 ##Logging In##
+To reach AnswerFactory, go to https://vector.geobigdata.io/answer-factory/login <br>
 Logging in retrieves a GBDX token. <br>
 ![Login page image](/images/ui_helpdoc/loginbox.PNG "Login Box for login page")
 
