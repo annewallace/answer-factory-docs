@@ -36,7 +36,7 @@ ___
 ___
 ![Upload shapefile button image](/images/ui_helpdoc/uploadbutton.PNG "Upload shapefile button") Click to open your computer directory to upload a **zipped** shapefile (including all necessary components of .dbf, .prj, .shp, and .shx); this shapefile will serve as your aoi, and the map will automatically snap to the shapefile once upload is complete. Aoi(s) display in *pink*.
 ___
-![Draw button image](/images/ui_helpdoc/draw.PNG "Draw button") Click to activate draw capability. Single click on map to drop the vertices of your aoi, and double-click to complete an aoi. Draw remains active, and you may draw any number of aois. Once you have completed drawing aois, click Draw button again to deactivate continued drawing capability. Aoi(s) display in *pink*.
+![Draw button image](/images/ui_helpdoc/drawbutton.PNG "Draw button") Click to activate draw capability. Single click on map to drop the vertices of your aoi, and double-click to complete an aoi. Draw remains active, and you may draw any number of aois. Once you have completed drawing aois, click Draw button again to deactivate continued drawing capability. Aoi(s) display in *pink*.
 ___
 <br>
 Once an aoi is added or created, more functionality is exposed. <br>
