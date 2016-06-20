@@ -162,7 +162,7 @@ ___
 ___
 **Extract Foliage** - Runs an algorithm over a raster acquisition to identify foliage in the image and generate vectors with information on and to notate where the foliage is. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Foliage.JPG). 
 ___
-**Extract LULC** - Standing for Land Use Land Cover, this runs an algorithm over a raster acquisition to identify various LULC types, such as , in the image and generate vectors with information on and to notate where the various types of LULC are. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/LULC.JPG). 
+**Extract LULC** - Standing for Land Use Land Cover, this runs an algorithm over a raster acquisition to identify various LULC types, such as Barren Soil, in the image and generate vectors with information on and to notate where the various types of LULC are. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/LULC.JPG). 
 ___
 **Extract Oilfields** - Runs an algorithm over a raster acquisition to identify oilfields in the image and generate vectors with information on and to notate where the oilfields are. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/OilFields.JPG). 
 ___
