@@ -153,23 +153,23 @@ ___
 ___
 ![Table page navigation image](/images/ui_helpdoc/tablenavigation.PNG "Table page navigation") Click on the arrows to move between pages, or click on a specific page number to jump to the page.
 ___
-<br><br><br>
+<br>
 
-##Answer Types##
+####Answer Types####
 The following is a list of possible answers that you may add to projects.
 ___
-**Extract Aircrafts** - Runs an algorithm over a raster acquisition to identify aircrafts in the image and generate vectors with information on and to notate where the aircrafts are. There are three subtypes of aircraft currently being detected: Airliner, Fighter, and Helicopter. To view a slide describing the answer recipe workflow, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Aircrafts.JPG). 
+**Extract Aircrafts** - Runs an algorithm over a raster acquisition to identify aircrafts in the image and generate vectors with information on and to notate where the aircrafts are. There are three subtypes of aircraft currently being detected: Airliner, Fighter, and Helicopter. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Aircrafts.JPG). 
 ___
-**Extract Foliage** - Runs an algorithm over a raster acquisition to identify foliage in the image and generate vectors with information on and to notate where the foliage is. To view a slide describing the answer recipe workflow, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Foliage.JPG). 
+**Extract Foliage** - Runs an algorithm over a raster acquisition to identify foliage in the image and generate vectors with information on and to notate where the foliage is. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Foliage.JPG). 
 ___
-**Extract LULC** - Standing for Land Use Land Cover, this runs an algorithm over a raster acquisition to identify various LULC types, such as , in the image and generate vectors with information on and to notate where the various types of LULC are. To view a slide describing the answer recipe workflow, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/LULC.JPG). 
+**Extract LULC** - Standing for Land Use Land Cover, this runs an algorithm over a raster acquisition to identify various LULC types, such as , in the image and generate vectors with information on and to notate where the various types of LULC are. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/LULC.JPG). 
 ___
-**Extract Oilfields** - Runs an algorithm over a raster acquisition to identify oilfields in the image and generate vectors with information on and to notate where the oilfields are. To view a slide describing the answer recipe workflow, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/OilFields.JPG). 
+**Extract Oilfields** - Runs an algorithm over a raster acquisition to identify oilfields in the image and generate vectors with information on and to notate where the oilfields are. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/OilFields.JPG). 
 ___
-**Extract Rivers** - Runs an algorithm over a raster acquisition to identify rivers in the image and generate vectors with information on and to notate where the rivers are. To view a slide describing the answer recipe workflow, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Rivers.JPG). 
+**Extract Rivers** - Runs an algorithm over a raster acquisition to identify rivers in the image and generate vectors with information on and to notate where the rivers are. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Rivers.JPG). 
 ___
-**Extract Roads** - Runs an algorithm over a raster acquisition to identify roads in the image and generate vectors with information on and to notate where the roads are. There are three subtypes of aircraft the user may detect on: Dirt Urban, Suburban, and Trails. To view a slide describing the answer recipe workflow, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Roads.JPG). 
+**Extract Roads** - Runs an algorithm over a raster acquisition to identify roads in the image and generate vectors with information on and to notate where the roads are. There are three subtypes of aircraft the user may detect on: Dirt Urban, Suburban, and Trails. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/Roads.JPG). 
 ___
-**Extract Urban Change** - Runs an algorithm over a set of raster acquisitions for change detection, to identify changes between the images and generate vectors with information on and to notate where the changes are. To view a slide describing the answer recipe workflow, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/ChangeDetection.JPG). 
+**Extract Urban Change** - Runs an algorithm over a set of raster acquisitions for change detection, to identify changes between the images and generate vectors with information on and to notate where the changes are. To view a slide describing the recipe for the answer, [click here](https://github.com/DigitalGlobe/answer-factory-docs/blob/master/images/Answer%20Definitions/ChangeDetection.JPG). 
 ___
 <br><br><br>
