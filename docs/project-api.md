@@ -255,9 +255,15 @@ Response (success):
 
 Body:
 [ 
-  { ... project JSON ... },
-  { ... project JSON ... },
-  { ... project JSON ... },
+  { "name": "project 1 name",
+    "id": "project 1 ID"
+  },
+  { "name": "project 2 name",
+    "id": "project 2 ID"
+  },  
+  { "name": "project 3 name",
+    "id": "project 3 ID"
+  },
   ...
 ]
 ```
