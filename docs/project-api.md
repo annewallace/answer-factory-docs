@@ -63,7 +63,7 @@ Projects are used mainly for discovering different kinds of information and rela
 * parameters: a list of recipe config parameters, each consisting of a name, a value, and a type, which correspond to the recipe being configured (see the recipe API documentation for more detail)
 
 ### Example Project JSON
-```
+```json
 {
   "id" : "uuid",
   "owner" : "user@mycompany.com",
@@ -79,8 +79,8 @@ Projects are used mainly for discovering different kinds of information and rela
       "name" : "num_vectors",
       "value" : "500",
       "type" : "string"
-    } 
-  }
+    } ]
+    }
   ],
   "originalGeometries" : [ {
     "type" : "FeatureCollection",
@@ -119,26 +119,26 @@ Projects are used mainly for discovering different kinds of information and rela
   ],
   "aois" : [ {
     "type" : "MultiPolygon",
-    "coordinates" : [ . . . elided . . . ]
+    "coordinates" : [ ". . . elided . . ." ]
    } 
   ],
   "namedBuffers" : [ {
     "name" : "SR Café",
     "buffer" : {
       "type" : "Polygon",
-      "coordinates" : [ . . . elided . . . ]
+      "coordinates" : [ ". . . elided . . ." ]
     }
   }, {
     "name" : "Saraiva Megastore",
     "buffer" : {
       "type" : "Polygon",
-      "coordinates" : [ . . . elided . . . ]
+      "coordinates" : [ ". . . elided . . ." ]
     }
   }, {
     "name" : "Lan House Free Jack",
     "buffer" : {
       "type" : "Polygon",
-      "coordinates" : [ . . . elided . . . ]
+      "coordinates" : [ ". . . elided . . ." ]
     }
   }
   ],
@@ -152,7 +152,7 @@ Projects are used mainly for discovering different kinds of information and rela
 ### Error responses
 
 For all requests, if an error occurs, the response body will consist of JSON formatted like this:
-```
+```json
 { "error" : "message" }
 ```
 The HTTP response code will depend on the error.
