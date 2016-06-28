@@ -33,12 +33,12 @@ An AnswerFactory project consists of four main parts:
 
 Project metadata includes the following fields:
 
-* id (String)
-* name (String)
-* owner (String)
-* accountId (String)
-* createDate (DateTime)
-* updateDate (DateTime)
+* *_id_* (String)
+* *_name_* (String)
+* *_owner_* (String)
+* *_accountId_* (String)
+* *_createDate_* (DateTime)
+* *_updateDate_* (DateTime)
 
 ### Original Base Geometries
 
@@ -48,19 +48,19 @@ The initial geometries for a project are represented as GeoJSON in a field named
 
 The buffered AOI geometries for a project are represented in two fields:
 
-* 'aois': a list of GeoJSON objects based on a buffer distance around the original geometries used to compute various spatial relationships for the project
-* 'namedBuffers': a list of JSON objects which assign a human-readable name to individual geometries within the buffered geometry collection, used for things like meaningful table-based displays for answers.  A named buffer consists of a String name and a GeoJSON geometry.
+* *_aois_*: a list of GeoJSON objects based on a buffer distance around the original geometries used to compute various spatial relationships for the project
+* *_namedBuffers_*: a list of JSON objects which assign a human-readable name to individual geometries within the buffered geometry collection, used for things like meaningful table-based displays for answers.  A named buffer consists of a String name and a GeoJSON geometry.
 
 ### Answer configurations
 
 Projects are used mainly for discovering different kinds of information and relationships among different kinds of data.  AnswerFactory allows users to configure "recipes" for discovering those answers.  These configurations are listed in a field named 'recipeConfigs'.  A recipe configuration consists of the following fields:
 
-* recipeId: the ID of the recipe to run
-* recipeName: the human-readable name of the recipe for display purposes
-* configurationDate: the DateTime when the recipe was configured for the project
-* startDate: the earliest time for which data will be returned
-* endDate: the latest time for which data will be returned
-* parameters: a list of recipe config parameters, each consisting of a name, a value, and a type, which correspond to the recipe being configured (see the recipe API documentation for more detail)
+* *_recipeId_*: the ID of the recipe to run
+* *_recipeName_*: the human-readable name of the recipe for display purposes
+* *_configurationDate_*: the DateTime when the recipe was configured for the project
+* *_startDate_*: the earliest time for which data will be returned
+* *_endDate_*: the latest time for which data will be returned
+* *_parameters_*: a list of recipe config parameters, each consisting of a name, a value, and a type, which correspond to the recipe being configured (see the recipe API documentation for more detail)
 
 ### Example Project JSON
 ```json
@@ -279,3 +279,4 @@ Response:
 ```
 200 OK
 ```
+
