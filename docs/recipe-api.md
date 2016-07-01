@@ -10,7 +10,7 @@ AnswerFactory supports managing recipes via REST API.  Recipes can be created, u
   * [Recipe parameters](#recipe-parameters)
   * [Recipe properties](#recipe-properties)
   * [Example Recipe JSON](#example-recipe-json)
-* [recipe REST API](#recipe-rest-api)
+* [Recipe REST API](#recipe-rest-api)
   * [Error responses](#error-responses)
   * [Create a recipe](#create-a-recipe)
   * [Update a recipe](#update-a-recipe)
