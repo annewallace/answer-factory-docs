@@ -169,7 +169,7 @@ The following is a list of possible answers that you may add to projects.
 ___
 **Extract Aircrafts** - Runs an algorithm over a raster acquisition to identify aircrafts in the image and generate vectors with information on and to notate where the aircrafts are. There are three subtypes of aircraft currently being detected: Airliner, Fighter, and Helicopter. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/Aircrafts.JPG). To view a demo of the answer, [click here](https://digitalglobe.wistia.com/medias/bi50oss7bz).
 ___
-**Extract Foliage** - Runs an algorithm over a raster acquisition to identify foliage in the image and generate vectors with information on and to notate where the foliage is. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/Foliage.JPG). 
+**Extract Foliage** - Runs an algorithm over a raster acquisition to identify foliage in the image and generate vectors with information on and to notate where the foliage is. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/Foliage1.JPG). 
 ___
 **Extract LULC** - Standing for Land Use Land Cover, this runs an algorithm over a raster acquisition to identify various LULC types, such as Barren Soil, in the image and generate vectors with information on and to notate where the various types of LULC are. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/LULC.JPG). 
 ___
