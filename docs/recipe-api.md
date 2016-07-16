@@ -45,7 +45,7 @@ Recipe type metadata defines the input, output, system, and definition for the r
 * **_inputType_**: name of the input to the recipe
 * **_outputType_**: name of the output to the recipe; determines how the result of the recipe will be displayed 
 * **_recipeType_**: name of the system utilized to execute the recipe
-* **_definition_**: string that describes how the specified system should execute the recipe
+* **_definition_**: string or JSON object that describes how the specified system should execute the recipe
 
 ### Recipe parameters
 
@@ -105,6 +105,9 @@ The HTTP response code will depend on the error.
 
 ### Create a recipe
 
+For this version of the recipe creation API call, the recipe definition parameter (see the recipe type metadata section above) must be a string
+which the specified recipe type can understand.  The next API endpoint supports using a JSON object for the recipe definition.
+
 Request:
 ```
 POST /answer-factory-recipe-service/api/recipe
@@ -113,9 +116,42 @@ Headers:
    Content-Type: application/json
 
 Body:
-   {
-    ... recipe definition (see above) ...
-   }
+  { ... recipe JSON (see above) ... }
+```
+
+Response (success):
+```
+202 Accepted
+```
+
+### Create a recipe with JSON object for recipe definition
+
+For this version of the recipe creation API call, the recipe definition parameter (see the recipe type metadata section above) must be a JSON object
+which the specified recipe type can understand.  The previous API endpoint supports using a string for the recipe definition.
+
+Request:
+```
+POST /answer-factory-recipe-service/api/recipe/json
+
+Headers:
+   Content-Type: application/json
+
+Example Body:
+  {
+    "id": "skynet-counts-test-1",
+    "name": "Test Query & Summarize Object Detection (One Year)",
+    "description": "Aggregates the skynet item_types by item_date and doc_count.",
+    "definition": {
+        "index": "vector-skynet-*",
+        "beginTime": "now-1y",
+        "endTime": "now",
+        "interval": "month",
+        "queryType": "agg-by-type-and-time"
+    },
+    "recipeType": "es-query",
+    "inputType": "none",
+    "outputType": "es-query-service"
+  }
 ```
 
 Response (success):
@@ -124,6 +160,9 @@ Response (success):
 ```
 
 ### Update a recipe
+
+For this version of the recipe update API call, the recipe definition parameter (see the recipe type metadata section above) must be a string
+which the specified recipe type can understand.  The next API endpoint supports using a JSON object for the recipe definition.
 
 Request:
 ```
@@ -137,6 +176,44 @@ Params:
 
 Body:
   { ... recipe JSON (see above) ... }
+```
+
+Response (success):
+```
+202 Accepted
+```
+
+### Update a recipe with JSON object for recipe definition
+
+For this version of the recipe update API call, the recipe definition parameter (see the recipe type metadata section above) must be a JSON object
+which the specified recipe type can understand.  The previous API endpoint supports using a string for the recipe definition.
+
+Request:
+```
+PUT /answer-factory-recipe-service/api/recipe/json/{recipeId}
+
+Headers:
+  Content-Type: application/json
+
+Params:
+  recipeId: the ID of the recipe to update
+
+Example Body:
+  {
+    "id": "skynet-counts-test-1",
+    "name": "Test Query & Summarize Object Detection (One Year)",
+    "description": "Aggregates the skynet item_types by item_date and doc_count.",
+    "definition": {
+        "index": "vector-skynet-*",
+        "beginTime": "now-1y",
+        "endTime": "now",
+        "interval": "month",
+        "queryType": "agg-by-type-and-time"
+    },
+    "recipeType": "es-query",
+    "inputType": "none",
+    "outputType": "es-query-service"
+  }
 ```
 
 Response (success):
