@@ -3,6 +3,8 @@
 
 ###How to [Extract Aircrafts](https://digitalglobe.wistia.com/medias/bi50oss7bz)###
 
+###How to [Extract Built-up Areas](https://digitalglobe.wistia.com/medias/48718t7mal)###
+
 ###How to [Extract Foliage](https://digitalglobe.wistia.com/medias/vvkyb4a4jn)###
 
 ###How to [Extract Roads](https://digitalglobe.wistia.com/medias/1lmngax11l)###
