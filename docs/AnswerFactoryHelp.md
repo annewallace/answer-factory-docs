@@ -169,17 +169,17 @@ The following is a list of possible answers that you may add to projects.
 ___
 **Extract Aircrafts** - Runs an algorithm over a raster acquisition to identify aircrafts in the image and generate vectors with information on and to notate where the aircrafts are. There are three subtypes of aircraft currently being detected: Airliner, Fighter, and Helicopter. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/Aircrafts.JPG). To view a demo of the answer, [click here](https://digitalglobe.wistia.com/medias/bi50oss7bz).
 ___
-**Extract Aircrafts Change** - Runs Extract Aircrafts Change algorithm over raster acquisitions and then compares the resulting vector outputs, displaying the difference.
+**Extract Aircrafts Change** - Runs Extract Aircrafts algorithm over multiple time series raster acquisitions and then compares the resulting vector outputs, displaying the difference.
 ___
 **Extract Built-Up Areas** - Runs an algorithm over a raster acquisition to identify areas with man-made structures in the image and generate vectors with information on and to notate where the structures are. Note that discovering built-up areas is not synonymous with extracting individual buildings; an entire city may generate a single vector as a "built-up area." To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/BuiltUp_Areas.jpg). To view a demo of the answer, [click here](https://digitalglobe.wistia.com/medias/48718t7mal).
 ___
-**Extract Built-Up Areas Change** - Runs Extract Built-Up Areas algorithm over raster acquisitions and then compares the resulting vector outputs, displaying the difference.
+**Extract Built-Up Areas Change** - Runs Extract Built-Up Areas algorithm over multiple time series raster acquisitions and then compares the resulting vector outputs, displaying the difference.
 ___
 **Extract Foliage** - Runs an algorithm over a raster acquisition to identify foliage in the image and generate vectors with information on and to notate where the foliage is. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/Foliage1.jpg). To view a demo of the answer, [click here](https://digitalglobe.wistia.com/medias/vvkyb4a4jn).
 ___
 **Extract LULC** - Standing for Land Use Land Cover, this runs an algorithm over a raster acquisition to identify various LULC types, such as Barren Soil, in the image and generate vectors with information on and to notate where the various types of LULC are. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/LULC.JPG).
 ___
-**Extract LULC Change** - Runs Extract LULC algorithm over raster acquisitions and then compares the resulting vector outputs, displaying the difference.
+**Extract LULC Change** - Runs Extract LULC algorithm over multiple time series raster acquisitions and then compares the resulting vector outputs, displaying the difference.
 ___
 **Extract Oilfields** - Runs an algorithm over a raster acquisition to identify oilfields in the image and generate vectors with information on and to notate where the oilfields are. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/OilFields.JPG). 
 ___
@@ -189,7 +189,7 @@ ___
 ___
 **Extract Soil** - Runs an algorithm over a raster acquisition to identify areas with bare soil exposed in the image and generate vectors with information on and to notate where the bare areas are. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/Soils.jpg).
 ___
-**Extract Soil Change** - Runs Extract Soil algorithm over raster acquisitions and then compares the resulting vector outputs, displaying the difference.
+**Extract Soil Change** - Runs Extract Soil algorithm over multiple time series raster acquisitions and then compares the resulting vector outputs, displaying the difference.
 ___
 **Extract Urban Change** - Runs an algorithm over a set of raster acquisitions for change detection, to identify changes between the images and generate vectors with information on and to notate where the changes are. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/ChangeDetection.JPG). To view a demo of the answer, [click here](https://digitalglobe.wistia.com/medias/mga2l31emk).
 ___
@@ -197,8 +197,8 @@ ___
 ___
 **Extract Vegetation** - Runs an algorithm over a raster acquisition to identify areas with vegetation in the image and generate vectors with information on and to notate where the vegetation is. "Vegetation" in this case is defined as any type of flora with healthy chlorophyll content. Note that discovering vegetation is not synonymous with extracting individual plants; an entire forest may generate a single vector as vegetation. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/Vegetation.jpg). To view a demo of the answer, [click here](https://digitalglobe.wistia.com/medias/p88g3k6yre).
 ___
-**Extract Vegetation Change** - Runs Extract Vegetation algorithm over raster acquisitions and then compares the resulting vector outputs, displaying the difference. To view a demo of the answer, [click here](https://digitalglobe.wistia.com/medias/p88g3k6yre).
+**Extract Vegetation Change** - Runs Extract Vegetation algorithm over multiple time series raster acquisitions and then compares the resulting vector outputs, displaying the difference. To view a demo of the answer, [click here](https://digitalglobe.wistia.com/medias/p88g3k6yre).
 ___
 **Extract Water** - Runs an algorithm over a raster acquisition to identify areas with water in the image and generate vectors with information on and to notate where the water is. To view a slide describing the recipe for the answer, [click here](../images/Answer%20Definitions/Water.jpg).
 ___
-**Extract Water Change** - Runs Extract Water algorithm over raster acquisitions and then compares the resulting vector outputs, displaying the difference.
+**Extract Water Change** - Runs Extract Water algorithm over multiple time series raster acquisitions and then compares the resulting vector outputs, displaying the difference.
