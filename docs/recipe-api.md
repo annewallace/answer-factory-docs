@@ -52,7 +52,7 @@ Recipe type metadata defines the input, output, system, and definition for the r
 Recipe parameters are typed key-value pairs, where the values are determined by users of AnswerFactory applications when the recipe is added to their recipe. Each paramter contains the following fields:
 
 * **_name_** (String)
-* **_description_** (Stirng)
+* **_description_** (String)
 * **_type_** (String)
 * **_required_** (Boolean)
 * **_allowedValues_**: optional list of enumerated values that an AnswerFactory user must selected from
@@ -62,32 +62,194 @@ Recipe parameters are typed key-value pairs, where the values are determined by 
 Recipe properties are key-value pairs that determine specific details about how the execution of this recipe should differ from others of the same type. 
 
 ### Example Recipe JSON
+With string definition:
 ```json
 {
-  "id": "extract-urban-change-series",
-  "name": "Extract Urban Change Over Time",
-  "description": "Extracts urban change vectors from the intersection of two acquisitions and write to GBDX Vector Service.",
-  "definition": " ... ",
-  "recipeType": "workflow",
-  "inputType": "acquisitions",
-  "outputType": "vector-service",
-  "validators": [],
-  "parameters": [
-    {
-      "allowedValues": [
-        "1 month ago",
-        "1 year ago"
-      ],
-      "name": "start_date",
-      "description": "Start Date",
-      "type": "string",
-      "required": "true"
+    "id": "extract-urban-change",
+    "name": "Extract Urban Change",
+    "description": "Extracts urban change vectors from the intersection of two acquisitions and write to GBDX Vector Service.",
+    "definition": "{ \"tasks\": [{ \"outputs\": [{ \"name\": \"data\" }, { \"name\": \"log\" }], \"taskType\": \"AOP_Strip_Processor\", \"name\": \"aop0\", \"inputs\": [{ \"name\": \"bands\", \"value\": \"MS\" }, { \"name\": \"data\", \"value\": \"{raster_path_0}\" }, { \"name\": \"enable_acomp\", \"value\": \"true\" }, { \"name\": \"enable_pansharpen\", \"value\": \"false\" }, { \"name\": \"enable_dra\", \"value\": \"false\" }, { \"name\": \"ortho_epsg\", \"value\": \"UTM\" }, { \"name\": \"ortho_pixel_size\", \"value\": \"2.0\" }] }, { \"outputs\": [{ \"name\": \"data\" }, { \"name\": \"log\" }], \"taskType\": \"AOP_Strip_Processor\", \"name\": \"aop1\", \"inputs\": [{ \"name\": \"bands\", \"value\": \"MS\" }, { \"name\": \"data\", \"value\": \"{raster_path_1}\" }, { \"name\": \"enable_acomp\", \"value\": \"true\" }, { \"name\": \"enable_pansharpen\", \"value\": \"false\" }, { \"name\": \"enable_dra\", \"value\": \"false\" }, { \"name\": \"ortho_epsg\", \"value\": \"UTM\" }, { \"name\": \"ortho_pixel_size\", \"value\": \"2.0\" }] }, { \"inputs\": [{ \"name\": \"pre_image\", \"source\": \"aop0:data\" }, { \"name\": \"post_image\", \"source\": \"aop1:data\" }], \"taskType\": \"change_detection\", \"name\": \"cd\", \"timeout\": 36000, \"outputs\": [{ \"name\": \"cd_output\" }] }, { \"name\": \"s3\", \"taskType\": \"StageDataToS3\", \"timeout\": 36000, \"inputs\": [{ \"name\": \"destination\", \"value\": \"http://insight-cloud-scratch/answer-factory/recipe-results/{project_id}/{recipe_id}/{run_id}\" }, { \"name\": \"data\", \"source\": \"cd:cd_output\" }], \"outputs\": [] }, { \"name\": \"vector\", \"taskType\": \"WriteShpToVectorServices\",  \"impersonation_allowed\": true,\"timeout\": 36000, \"inputs\": [{ \"name\": \"shapefileMapping\", \"value\": \"vector.crs=EPSG:4326\nvector.ingestSource=Change Detection\nvector.itemType=Urban Change\" }, { \"name\": \"filePattern\", \"value\": \"results\" }, { \"name\": \"index\", \"value\": \"vector-changedetection\" }, { \"name\": \"items\", \"source\": \"cd:cd_output\" }], \"outputs\": [{ \"name\": \"result\" }] }], \"name\": \"cd\" }",
+    "recipeType": "workflow",
+    "inputType": "acquisitions",
+    "outputType": "vector-service",
+    "validators": [],
+    "parameters": [
+        {
+            "allowedValues": [
+                "next most recent",
+                "1 month",
+                "1 year"
+            ],
+            "name": "compare_with",
+            "description": "Compare With",
+            "type": "string",
+            "required": "true"
+        }
+    ],
+    "properties": {
+        "image_bands": "Pan_MS1, Pan_MS1_MS2",
+        "num_acquisitions": "2"
     }
-  ],
-  "properties": {
-    "image_bands": "Pan_MS1, Pan_MS1_MS2",
-    "num_acquisitions": "2"
-  }
+}
+```
+
+With JSON object definition:
+```json
+{
+	"id": "extract-urban-change",
+	"name": "Extract Urban Change",
+	"description": "Extracts urban change vectors from the intersection of two acquisitions and write to GBDX Vector Service.",
+	"definition": {
+		"tasks": [{
+			"outputs": [{
+				"name": "data"
+			},
+			{
+				"name": "log"
+			}],
+			"taskType": "AOP_Strip_Processor",
+			"name": "aop0",
+			"inputs": [{
+				"name": "bands",
+				"value": "MS"
+			},
+			{
+				"name": "data",
+				"value": "{raster_path_0}"
+			},
+			{
+				"name": "enable_acomp",
+				"value": "true"
+			},
+			{
+				"name": "enable_pansharpen",
+				"value": "false"
+			},
+			{
+				"name": "enable_dra",
+				"value": "false"
+			},
+			{
+				"name": "ortho_epsg",
+				"value": "UTM"
+			},
+			{
+				"name": "ortho_pixel_size",
+				"value": "2.0"
+			}]
+		},
+		{
+			"outputs": [{
+				"name": "data"
+			},
+			{
+				"name": "log"
+			}],
+			"taskType": "AOP_Strip_Processor",
+			"name": "aop1",
+			"inputs": [{
+				"name": "bands",
+				"value": "MS"
+			},
+			{
+				"name": "data",
+				"value": "{raster_path_1}"
+			},
+			{
+				"name": "enable_acomp",
+				"value": "true"
+			},
+			{
+				"name": "enable_pansharpen",
+				"value": "false"
+			},
+			{
+				"name": "enable_dra",
+				"value": "false"
+			},
+			{
+				"name": "ortho_epsg",
+				"value": "UTM"
+			},
+			{
+				"name": "ortho_pixel_size",
+				"value": "2.0"
+			}]
+		},
+		{
+			"inputs": [{
+				"name": "pre_image",
+				"source": "aop0:data"
+			},
+			{
+				"name": "post_image",
+				"source": "aop1:data"
+			}],
+			"taskType": "change_detection",
+			"name": "cd",
+			"timeout": 36000,
+			"outputs": [{
+				"name": "cd_output"
+			}]
+		},
+		{
+			"name": "s3",
+			"taskType": "StageDataToS3",
+			"timeout": 36000,
+			"inputs": [{
+				"name": "destination",
+				"value": "http://insight-cloud-scratch/answer-factory/recipe-results/{project_id}/{recipe_id}/{run_id}"
+			},
+			{
+				"name": "data",
+				"source": "cd:cd_output"
+			}],
+			"outputs": []
+		},
+		{
+			"name": "vector",
+			"taskType": "WriteShpToVectorServices",
+			"impersonation_allowed": true,
+			"timeout": 36000,
+			"inputs": [{
+				"name": "shapefileMapping",
+				"value": "vector.crs=EPSG:4326\nvector.ingestSource=Change Detection\nvector.itemType=Urban Change"
+			},
+			{
+				"name": "filePattern",
+				"value": "results"
+			},
+			{
+				"name": "index",
+				"value": "vector-changedetection"
+			},
+			{
+				"name": "items",
+				"source": "cd:cd_output"
+			}],
+			"outputs": [{
+				"name": "result"
+			}]
+		}],
+		"name": "cd"
+	},
+	"recipeType": "workflow",
+	"inputType": "acquisitions",
+	"outputType": "vector-service",
+	"validators": [],
+	"parameters": [{
+		"allowedValues": ["next most recent",
+		"1 month",
+		"1 year"],
+		"name": "compare_with",
+		"description": "Compare With",
+		"type": "string",
+		"required": "true"
+	}],
+	"properties": {
+		"image_bands": "Pan_MS1, Pan_MS1_MS2",
+		"num_acquisitions": "2"
+	}
 }
 ```
 
